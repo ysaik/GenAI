@@ -16,19 +16,25 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   yaml-lint:
-    runs-on: static-checks
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: make yamllint
 
   pycodestyle:
-    runs-on: static-checks
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: make pycodestyle
 
   pylint:
-    runs-on: static-checks
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: make pylint
+
+  bandit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make bandit
