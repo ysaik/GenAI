@@ -5,7 +5,7 @@ pylint:
   pylint --rcfile=$(CURDIR)/.pylintrc $(PYTHON_FILES)
 
 bandit:
-  bandit -c .bandit.yaml $(PYTHON_FILES)
+  bandit -c $(PYTHON_FILES)
 
 codespell:
   codespell -L wan -q 2 -S "./.git"

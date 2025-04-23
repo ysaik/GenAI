@@ -1,0 +1,9 @@
+---
+extends: default
+
+rules:
+  truthy:
+    check-keys: false
+  braces:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
