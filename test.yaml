@@ -1,0 +1,11 @@
+name: Alice
+age: 30
+city: New York
+hobbies:
+  - reading
+  - hiking
+  - coding
+is_student: false
+grades:
+  math: 95
+  science: 88
