@@ -12,3 +12,6 @@ codespell:
 
 yamllint:
   yamllint $(YAML_FILES)
+
+pycodestyle:
+  pycodestyle $(PYTHON_FILES)
