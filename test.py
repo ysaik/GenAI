@@ -1,3 +1,8 @@
+"""
+This module provides a function to read data from a YAML file
+and print its content to the console.
+It includes error handling for file not found and invalid YAML format.
+"""
 import yaml
 
 def read_and_print_yaml(file_path):
@@ -8,7 +13,7 @@ def read_and_print_yaml(file_path):
         file_path (str): The path to the YAML file.
     """
     try:
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             data = yaml.safe_load(file)
             print(data)
     except FileNotFoundError:
