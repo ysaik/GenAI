@@ -15,10 +15,14 @@ yamllint:
 pycodestyle:
 	pycodestyle $(PYTHON_FILES)
 
+bandit:
+	bandit $(PYTHON_FILES)
+
 all:
 	@echo "Running all linters..."
 	@$(MAKE) pylint
 	@$(MAKE) codespell
 	@$(MAKE) yamllint
 	@$(MAKE) pycodestyle
+	@$(MAKE) bandit
 	@echo "All linters completed."
