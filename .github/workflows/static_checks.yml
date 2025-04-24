@@ -18,23 +18,63 @@ jobs:
   yaml-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: make yamllint
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10' # Or your desired Python version
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pipenv
+        pipenv sync --dev # Install all dependencies, including dev ones where cod
+    - name: Run yamllint
+      run: make yamllint
 
   pycodestyle:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: make pycodestyle
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10' # Or your desired Python version
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pipenv
+        pipenv sync --dev # Install all dependencies, including dev ones where cod
+    - name: Run pycodestyle
+      run: make pycodestyle
 
   pylint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: make pylint
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10' # Or your desired Python version
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pipenv
+        pipenv sync --dev # Install all dependencies, including dev ones where cod
+    - name: Run pylint
+      run: make pylint
 
   bandit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: make bandit
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10' # Or your desired Python version
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pipenv
+        pipenv sync --dev # Install all dependencies, including dev ones where cod
+    - name: Run bandit
+      run: make bandit
