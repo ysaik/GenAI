@@ -5,9 +5,8 @@ It includes error handling for file not found and invalid YAML format.
 """
 import yaml
 
+
 def read_and_print_yaml(file_path):
-
-
     """
     Reads data from a YAML file and prints its content.
 

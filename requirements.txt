@@ -1,1 +1,4 @@
-yaml
+pylint
+codespell
+yamllint
+pycodestyle
