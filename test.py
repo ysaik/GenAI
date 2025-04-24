@@ -6,6 +6,8 @@ It includes error handling for file not found and invalid YAML format.
 import yaml
 
 def read_and_print_yaml(file_path):
+
+
     """
     Reads data from a YAML file and prints its content.
 
@@ -20,6 +22,7 @@ def read_and_print_yaml(file_path):
         print(f"Error: File not found at '{file_path}'")
     except yaml.YAMLError as e:
         print(f"Error parsing YAML file '{file_path}': {e}")
+
 
 if __name__ == "__main__":
     read_and_print_yaml('test.yaml')
