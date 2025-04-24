@@ -1,4 +1,0 @@
-pylint
-codespell
-yamllint
-pycodestyle
