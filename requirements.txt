@@ -1,5 +1,2 @@
 PyYAML
-ca-certificates
-gnupg
-curl
 google-genai
