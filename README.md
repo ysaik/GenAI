@@ -64,8 +64,21 @@ Verify if VertexAI API is enabled
 gcloud services list --enabled --filter="config.name=aiplatform.googleapis.com"
 ```
 
+## Sample GenAI program
+Set Environment
+```bash
+export GOOGLE_CLOUD_PROJECT="<PROJECT_ID>"
+export GOOGLE_CLOUD_LOCATION="us-central1"
+export GOOGLE_GENAI_USE_VERTEXAI=True
+```
+Run Program
+```bash
+(.venv) saiky@Saikumar:~/GenAI$ python3 ./src/first_genai.py 
+The current Prime Minister of India is Narendra Modi.
+```
 
-## Sample Program
+
+## Sample Interactive AI Program
 ```bash
 (.venv) saiky@Saikumar:~/GenAI$ python3 src/first_vertexai.py 
 Mr. LLM: Ask your query!!
