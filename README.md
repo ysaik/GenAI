@@ -32,6 +32,7 @@ You can refer the following guide to enable APIs. Search for `VertexAI` and enab
 ### Install gcloud cli
 ```bash
 sudo apt update
+sudo apt install apt-transport-https ca-certificates gnupg curl -y
 
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee /etc/apt/sources.list.d/google-cloud-sdk.list
 
