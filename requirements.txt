@@ -1,5 +1,4 @@
 PyYAML
-apt-transport-https
 ca-certificates
 gnupg
 curl
