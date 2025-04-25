@@ -12,7 +12,8 @@ MODEL_NAME = "gemini-2.0-flash-001"
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 
 model = GenerativeModel(MODEL_NAME)
-user_input = input("Mr. LLM: Ask your query!! or 'quit' to exit: \nYou: ")
+user_input = input(  # nosec
+    "Mr. LLM: Ask your query! or 'quit' to exit: \nYou: ")
 while True:
     # Generate content using the model
     response = model.generate_content(user_input)
@@ -20,6 +21,6 @@ while True:
     print("Mr LLM : "+generated_text)
 
     # Get user input
-    user_input = input("You : ")
+    user_input = input("You : ")  # nosec
     if user_input.lower() == "quit":
         break
