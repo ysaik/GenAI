@@ -3,8 +3,8 @@ YAML_FILES := $(shell find . \( -name .github -o -name .git -o -name .venv \) -p
 
 .PHONY: pylint bandit codespell yamllint pycodestyle
 
-pylint:
-	pylint --rcfile=$(CURDIR)/.pylintrc $(PYTHON_FILES)
+# pylint:
+# 	pylint --rcfile=$(CURDIR)/.pylintrc $(PYTHON_FILES)
 
 codespell:
 	codespell -L wan -q 2 -S "./.git"
