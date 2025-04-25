@@ -1,5 +1,5 @@
 PYTHON_FILES := $(shell find . -name '*.py' -not -path '*.venv*')
-YAML_FILES := $(shell find . -type f -name "*.yaml" -o -name "*.yml" -not -path "*.github*" -a -not -path "*venv**")
+YAML_FILES := $(shell find . \( -name .github -o -name .git -o -name .venv \) -prune -o -type f -name '*.y*ml' -print)
 
 .PHONY: pylint bandit codespell yamllint pycodestyle
 
