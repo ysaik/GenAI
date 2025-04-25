@@ -1,5 +1,11 @@
 # MyGenAI
 
+## Pre-Requsites
+* Ubuntu or WSL environment
+    [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+* Install Python 3.12 or higher version
+ 
+
 ## Setup Python Virtual Environment
 
 ### Create python virtual environment
