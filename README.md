@@ -1,4 +1,6 @@
 # MyGenAI
+## Introduction
+This repository serves as a comprehensive guide and workspace for learning Generative AI. It includes detailed documentation, Python programs, and practical examples to explore and understand the concepts of Generative AI. The goal is to document learnings, experiment with models, and build interactive AI applications using tools like Google Vertex AI and Python.
 
 ## Pre-Requsites
 * Ubuntu or WSL environment
