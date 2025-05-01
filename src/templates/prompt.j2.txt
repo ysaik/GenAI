@@ -1,0 +1,13 @@
+# Task
+{{ instructions }}
+
+# Background
+{{ user_context }}
+
+# Problem Statement
+{{ query }}
+
+{% if notes %}
+# Additional Notes
+{{ notes }}
+{% endif %}

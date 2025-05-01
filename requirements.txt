@@ -1,3 +1,4 @@
 PyYAML
 google-genai
 google-cloud-aiplatform
+jinja2

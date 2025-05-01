@@ -2,25 +2,24 @@
 This program is to demonstrate the use of the Vertex
 AI Generative Model API.`
 """
-import vertexai
-from vertexai.generative_models import GenerativeModel
+from ai_utils.llm import LLM
+from ai_utils.response_parser import AIResponseParser as RS
 
-PROJECT_ID = "mygenai-457902"
-LOCATION = "us-central1"
-MODEL_NAME = "gemini-2.0-flash-001"
 
-vertexai.init(project=PROJECT_ID, location=LOCATION)
+def run_ai_query():
 
-model = GenerativeModel(MODEL_NAME)
-user_input = input(  # nosec
-    "Mr. LLM: Ask your query! or 'quit' to exit: \nYou: ")
-while True:
-    # Generate content using the model
-    response = model.generate_content(user_input)
-    generated_text = response.candidates[0].content.parts[0].text
-    print("Mr LLM : "+generated_text)
+    # Create an instance of AIQuery
+    llm = LLM()
 
-    # Get user input
-    user_input = input("You : ")  # nosec
-    if user_input.lower() == "quit":
-        break
+    # Initialize the model
+    llm.initialize()
+
+    # Query the model with the generated prompt
+    response = llm.ask("Who is the Prime Minister of India?")
+    RS(response).dump_response()
+
+# Call the function
+
+
+if __name__ == "__main__":
+    run_ai_query()
