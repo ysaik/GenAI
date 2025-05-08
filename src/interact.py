@@ -36,9 +36,10 @@ def interact():
     while True:
 
         # Query the model with the generated prompt
-        response = llm.ask(prompt)
-        generated_text = RS(response).get_text()
-        print("Mr LLM : "+generated_text)
+        response = llm.ask(prompt, chat=True)
+        # generated_text = RS(response).get_text()
+        RS(response).dump_response()
+        # print("Mr LLM : "+generated_text)
 
         prompt = input("You : ")  # nosec
         if prompt.lower() == "quit":
