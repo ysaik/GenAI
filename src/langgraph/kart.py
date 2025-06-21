@@ -47,8 +47,7 @@ def route_validator(state: State):
 
 
 def add_to_cart(state: State):
-    print(f"Checking for availability
-        of item {state['value']} in warehouse...")
+    print(f"Checking for availability of item {state['value']} in warehouse")
 
     return state
 
