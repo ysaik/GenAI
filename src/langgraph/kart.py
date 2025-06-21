@@ -14,6 +14,8 @@ cricket_warehouse = [
     "ball",
     "stumps"
 ]
+
+
 class State(TypedDict):
     value: str
     add_to_cart: bool
@@ -45,8 +47,9 @@ def route_validator(state: State):
 
 
 def add_to_cart(state: State):
-    print(f"Checking for availability of item {state['value']} in warehouse...")
-    
+    print(f"Checking for availability
+        of item {state['value']} in warehouse...")
+
     return state
 
 
@@ -65,7 +68,7 @@ def check_stock(state: State):
 def payment(state: State):
     print("Payment Received!!!")
     state["payment"] = True
-    
+
     return state
 
 
